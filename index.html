@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Feel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+
+    <link rel="shortcut icon" href="1.basic/images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="1.basic/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="1.basic/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="1.basic/css/bootstrap.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="1.basic/css/style.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="1.basic/css/magnific-popup.css">
+    <!-- Modernizr JS -->
+    <script src="1.basic/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="1.basic/js/respond.min.js"></script><![endif]-->
+
+
+</head>
+<body>
+
+<div id="fh5co-page">
+    <!--预加载-->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--侧栏按钮-->
+    <div class="aside-toggle btn-circle">
+        <a href="#"><span></span><em>About</em></a>
+    </div>
+    <!--侧栏内容-->
+    <div id="fh5co-aside">
+        <div class="image-bg"></div>
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="fh5co-aside-inner">
+                    <div class="row" id="fh5co-bio">
+                        <div class="col-md-12">
+                            <h2>About Me</h2>
+                        </div>
+                        <!--打字效果-->
+                        <div class="col-md-6">
+                            <span class="typed"></span>
+                        </div>
+                        <div class="col-md-12 fh5co-social"></div>
+                        <div class="col-md-12" style="margin-top: 40px;"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--内容区-->
+    <div class="container-fluid" id="fh5co-image-grid">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+        </div>
+    </div>
+    <!--画廊-->
+    <div class="MyTemplateLgallery">
+    </div>
+</div>
+<!-- jQuery -->
+<script src="1.basic/js/jquery.min.js"></script>
+<!--加载图片-->
+<script>
+    $.get("http://everywhere.red:8080/everywhere/getpicnum?userName=test", function (data, status) {
+        console.log(data);
+        for (var i = data - 1; i > 0; i--) {
+            $(".grid-sizer").after("<div class=\"grid-item item animate-box\" data-animate-effect=\"fadeIn\">\n" +
+                "                <a>\n" +
+                "                    <div class=\"img-wrap\">\n" +
+                "                        <img src=\"1.basic/images/content/img_" + i + ".jpg?" + Math.random() + "\" alt=\"\" class=\"img-responsive\">\n" +
+                "                    </div>\n" +
+                "                    <div class=\"text-wrap\">\n" +
+                "                        <div class=\"text-inner\">\n" +
+                "                            <div>\n" +
+                "                                <h2>光圈</h2>\n" +
+                "                                <span>f/5.0</span>\n" +
+                "                                <h2>快门</h2>\n" +
+                "                                <span>1/1000</span>\n" +
+                "                                <h2>焦距</h2>\n" +
+                "                                <span>50/1</span>\n" +
+                "                                <h2>ISO</h2>\n" +
+                "                                <span>100</span>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                </a>\n" +
+                "            </div>");
+        }
+
+    });
+
+
+</script>
+
+<!--预加载效果-->
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            $('body').addClass('loaded');
+        }, 2000);
+
+    };
+</script>
+
+
+<!--画廊插件-->
+<link href="2.hualang/css/lgallery.min.css" rel="stylesheet">
+<!--打字插件-->
+<link href="3.type/css/mytype.css" rel="stylesheet">
+<!--预加载效果-->
+<link href="4.preloader/css/main.css" rel="stylesheet">
+
+
+<!-- jQuery Easing -->
+<script src="1.basic/js/jquery.easing.1.3.js"></script>
+
+
+<!-- Bootstrap -->
+<script src="1.basic/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="1.basic/js/jquery.waypoints.min.js"></script>
+
+<!-- Magnific -->
+<script src="1.basic/js/jquery.magnific-popup.min.js"></script>
+<script src="1.basic/js/magnific-popup-options.js"></script>
+<!-- Isotope & imagesLoaded -->
+<script src="1.basic/js/isotope.pkgd.min.js"></script>
+<script src="1.basic/js/imagesloaded.pkgd.min.js"></script>
+<!-- GSAP  -->
+<script src="1.basic/js/TweenLite.min.js"></script>
+<script src="1.basic/js/CSSPlugin.min.js"></script>
+<script src="1.basic/js/EasePack.min.js"></script>
+<!-- MAIN JS -->
+<script src="1.basic/js/main.js"></script>
+<!--画廊插件-->
+<script src="2.hualang/js/lgallery.min.js"></script>
+<script>
+    // 点击图片时新增画廊
+    $(".grid-item").click(function () {
+            $(".MyTemplateLgallery").empty();
+            var val = $(this).find(".img-responsive")[0];
+            var src = $(val).attr("src");
+            console.log(src);
+            var re = src.substring(src.indexOf("_") + 1, src.lastIndexOf("."));
+            console.log(re);
+
+
+            for (var i = 0; i < 30; i++) {
+                var tmp = "1.basic/images/content/img_" + ++re % 31 + ".jpg";
+                src = src + "," + tmp;
+            }
+            console.log(src);
+
+
+            $(".MyTemplateLgallery").append("<div class='TemplateLgallery'></div>");
+            $(".TemplateLgallery").attr("data-lgallery", src);
+            initLG();
+            $(".TemplateLgallery").click();
+            $(".LGallery-OpenBtn").remove();
+        }
+    );
+</script>
+<!--打字效果-->
+<script src="3.type/js/typed.js"></script>
+<script>
+    var typed = new Typed('.typed', {
+        strings: ['旅途中遇到的每一位朋友：^1000 <br>这是一个与你们有关的网站，^1000 <br>感谢你们一路相伴，^1000 <br>这里有我的回忆，^1000 <br>也有你们的回忆。^1000'],
+        typeSpeed: 120, //打字速度
+        // backSpeed: 0, //回退速度
+        startDelay: 500,
+        loop: false
+    });
+    $(".btn-circle").click(function () {
+        typed.reset();
+    })
+</script>
+
+</body>
+</html>
+
